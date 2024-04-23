@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic HTML Example</title>
+    <style>
+        .all-browsers {
+  margin: 0;
+  padding: 5px;
+  background-color: lightblue;
+}
+
+.all-browsers > h1, .browser {
+  margin: 10px;
+  padding: 5px;
+}
+
+.browser {
+  background: white;
+}
+
+.browser > h2, p {
+  margin: 4px;
+  font-size: 90%;
+}
+ 
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Welcome to My Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#semantic">Semantic</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <article>
+                <h2>Home Section</h2>
+                <p>xyz hii Welcome to home.</p>
+            </article>
+        </section>
+
+        <section id="about">
+            <article>
+                <h2>About Section</h2>
+                <p>yzx hello Welcome to about section.</p>
+            </article>
+        </section>
+
+        <section id="contact">
+            <article>
+                <h2>Contact Section</h2>
+                <p>zyx hello Welcome to contact section.</p>
+            </article>
+        </section>
+
+        <section id="Semantic">
+            <article>
+                <h2>Semantic section</h2>
+                <p>div span aside </p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;
+            ite.</p>
+    </footer>
+
+</body>
+
+</html>

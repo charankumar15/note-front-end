@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            background-color: #1175da;
+            color: rgb(194, 24, 24);
+        }
+
+        label {
+            background-color: rgb(20, 33, 181);
+        }
+    </style>
+</head>
+
+<body>
+    <p>charan</p>
+    <p>vasanth</p>
+    <label for="charan">charan3</label>
+    <label for="charan">charan4</label>
+</body>
+
+</html>

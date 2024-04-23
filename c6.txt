@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            background-color: #cd6722;
+            color: rgb(208, 210, 211);
+        }
+
+        label {
+            background-color: rgb(226, 243, 226);
+        }
+    </style>
+</head>
+
+<body>
+    <p>my logo</p>
+    <p>create</p>
+    <label for="charan">login</label>
+    <label for="charan">page$</label>
+</body>
+
+</html>

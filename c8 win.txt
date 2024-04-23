@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            background-color: #160343;
+            color: rgb(209, 214, 216);
+        }
+
+        label {
+            background-color: rgb(226, 243, 226);
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        Get branding inspiration from real Wix users and create your own custom logo</p>
+    <br>
+    <p>Explore logos by industry</p>
+    <label for="charan">
+        Select
+        
+        
+        All   ^
+        
+        
+        
+        </label>
+    <label for="charan">Bakery Logo
+        Example of a barber shop logo.
+        Explore More  →
+        
+        Barber Logo
+        Example of a beauty business logo.
+        Explore More  →
+        
+        Beauty Logo
+        Example of a boutique logo.
+        Explore More  →
+        
+        Boutique Logo</label>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Your Awesome Website</title>
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #023252, #2c3e50);
+    color: #fff;
+}
+
+header {
+    text-align: center;
+    padding: 50px 0;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+main {
+    padding: 20px;
+}
+
+#animated-section {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+button {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <script>
+        function animateText() {
+    var element = document.getElementById("animated-section");
+    element.classList.add("animated");
+    setTimeout(function() {
+        element.classList.remove("animated");
+    }, 1000);
+}
+
+    </script>
+
+    <header>
+        <h1> Website</h1>
+        <p>Wthetthea</p>
+    </header>
+
+    <main>
+        <section id="animated-section">
+            <h2> Content</h2>
+            <p>Dfyfvhjjhy.</p>
+            <button onclick="animateText()">Click me</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; charan</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

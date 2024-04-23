@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #calcu {
+    background-color: #7fffd4;
+    width: 225px;
+    height: 270px;
+    padding: 30px;
+    margin: auto;
+    margin-top: 150px;
+    border-radius: 10px;
+    border: 2px solid #FCE4EC;
+    box-shadow: 0 4px 8px 0 rgba(79, 209, 249, 0.2), 0 6px 20px 0 rgba(52, 249, 236, 0.19);
+}
+
+#calcu .container {
+    padding-left: 4px;
+    width: 258px;
+    height: 50px;
+}
+
+#calcu button {
+    background-color: #FCE4EC;
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    margin-top: 9px;
+    font-size: 18px;
+    border: none;
+}
+
+#calcu input {
+    width: 190px;
+    height: 10px;
+    text-align: end;
+    padding: 15px;
+    font-size: 20px;
+}
+    </style>
+</head>
+
+<body>
+    
+    <div class="calcu">
+        <div class="container">
+            <input type="text" placeholder="0" class="object" />
+            <div class="container">
+                <button class="mbtn">AC</button>
+                <button class="mbtn">Del</button>
+                <button class="mbtn">%</button>
+                <button class="mbtn">/</button>
+            </div>
+            <div class="container">
+                <button onclick="display('7')">7</button>
+                <button onclick="display('8')">8</button>
+                <button onclick="display('9')">9</button>
+                <button class="mbtn">*</button>
+            </div>
+            <div class="container">
+                <button onclick="display('4')">4</button>
+                <button onclick="display('5')">5</button>
+                <button onclick="display('6')">6</button>
+                <button class="mbtn">-</button>
+            </div>
+            <div class="container">
+                <button onclick="display('1')">1</button>
+                <button onclick="display('2')">2</button>
+                <button onclick="display('3')">3</button>
+                <button class="mbtn">+</button>
+            </div>
+            <div class="container">
+                <button class="mbtn">.</button>
+                <button onclick="display('0')">0</button>
+                <button class="mbtn">=</button>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

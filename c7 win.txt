@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            background-color: #ef2929;
+            color: rgb(208, 210, 211);
+        }
+
+        label {
+            background-color: rgb(226, 243, 226);
+        }
+    </style>
+</head>
+
+<body>
+    <p>CHOOSE HOW YOU WANT TO CREATE YOUR LOGO</p>
+    <br>
+    <p>Looking for a logo youve already created?</p>
+    <label for="charan">Create a logo
+        yourself</label><p>Create a login</p>
+    <label for="charan">Hire a professional
+        designer</label><p>hire a designer</p>
+</body>
+
+</html>

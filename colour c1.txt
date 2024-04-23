@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            background-color: #9E3023;
+            color: antiquewhite;
+        }
+
+        label {
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <p>hello</p>
+    <p>hello2</p>
+    <label for="hello3">hello3</label>
+    <label for="hello4">hello4</label>
+</body>
+
+</html>

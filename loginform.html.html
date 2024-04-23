@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        } */
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(150deg, rgb(5, 90, 18) 0%, #022b0d 50%, rgb(3, 165, 17) 100%);
+            
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            padding: 15px;
+            border: 1px solid rgb(5, 5, 8);
+            border-radius: 5px;
+            background-color: rgba(44, 144, 55, 0.2);
+
+
+
+        }
+
+        input {
+            margin: 5px 0px;
+            height: 35px;
+            padding: 7px;
+
+        }
+
+        button {
+            height: 35px;
+            margin: 5px 0px;
+            background-color: rgb(77, 232, 147);
+            border: none;
+            border-radius: 5px;
+            color: #361299;
+        }
+
+        button:hover {
+            background-color: #6c16e4;
+            color: rgb(196, 245, 50);
+        }
+
+        /* h1 {
+            margin-bottom: 5%px;
+        } */
+    </style>
+</head>
+
+</html>
+<div class="container">
+    <h1 style="color:rgb(183, 200, 215);">loginform</h1>
+    <p style="color: white;">Please enter your credentials to login.</p>
+    <input type="username" placeholder="username">
+    <input type="email" placeholder="email">
+    <input type="password" placeholder="password">
+    <p class="message" >Not registered? <a href="#">Create an account</a></p>
+    <button>login</button>
+</div>
+</body>
+
+</html>

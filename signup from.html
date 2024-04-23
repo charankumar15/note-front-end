@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(150deg,#cf7805 0%,#ae2807 50%, rgb(112, 120, 10) 100%) ;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 15px;
+    border: 1px solid skyblue;
+    border-radius: 5px;
+    background-color: rgba(255, 0, 0, 0.003);
+    
+    
+}
+input{
+    margin: 5px 0px;
+    height: 35px;
+    padding: 7px;
+
+}
+button{
+    height: 35px;
+    margin: 5px 0px;
+    background-color: rgb(245, 106, 37);
+    border: none;
+    border-radius: 5px;
+    color: #333;
+}
+button:hover{
+    background-color: #ae0606;
+    color: skyblue;
+}
+</style>
+    </head>
+</html>
+<div class="container">
+    <h1 style="color:black;">signup form</h1>
+    <p style="color: white;">Please enter your credentials to login.</p>
+    <input type="username"
+    placeholder="username">
+    <input type="email"
+    placeholder="email">
+    <input type="password"
+    placeholder="password">
+    <input type="reenter password"
+    placeholder="reenter password">
+    <p class="message">Not registered? <a href="#">Create an account</a></p>
+    <button>signup</button>
+</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div+ p {
+  background-color: yellow;
+}
+div~ p {
+  background-color: yellow;
+}
+/* div p { */
+  /* background-color: yellow; */
+/* } */
+/* div>p { */
+  /* background-color: yellow; */
+/* } */
+input:checked+
+span{
+    text-decoration: line-through;
+}
+</style>
+</head>
+<body>
+
+<h2>Descendant Selector</h2>
+
+<p>The descendant selector matches all elements that are descendants of a specified element.</p>
+
+<div>
+  <p>Paragraph 1 in the div.</p>
+  <p>Paragraph 2 in the div.</p>
+  <section><p>Paragraph 3 in the div.</p></section>
+</div>
+
+<p>Paragraph 4. Not in a div.</p>
+<p>Paragraph 5. Not in a div.</p>
+<samp>hello</samp>
+<p>Paragraph 6 in the div.</p>
+<input type="checkbox" name="" id="">
+<span>hello</span>
+<input type="checkbox" name="" id="">
+<span>2hello</span>
+
+</body>
+</html>
+
+

@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            display: inline-block;
+            width: 200px;
+            text-align: center;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 10px;
+            height: 150px;
+        }
+
+        .card.male {
+            background-color: aqua;
+            border: 5px solid green;
+        }
+
+        .card.female {
+            background-color: rgb(221, 135, 184);
+            font-weight: bolder;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="page"></div>
+    <script>
+        var data = [
+            {
+                "name": "Reed Hart",
+                "age": 44,
+                "text": "dolor. Donec fringilla. Donec feugiat metus sit amet ante. Vivamus",
+                "Gender": "female"
+            },
+            {
+                "name": "Jarrod Underwood",
+                "age": 58,
+                "text": "Nullam lobortis quam a felis ullamcorper viverra. Maecenas iaculis aliquet",
+                "Gender": "male"
+            },
+            {
+                "name": "Charles Reyes",
+                "age": 50,
+                "text": "id, blandit at, nisi. Cum sociis natoque penatibus et magnis",
+                "Gender": "male"
+            },
+            {
+                "name": "Castor Russell",
+                "age": 21,
+                "text": "in, cursus et, eros. Proin ultrices. Duis volutpat nunc sit",
+                "Gender": "female"
+            },
+            {
+                "name": "Cathleen Short",
+                "age": 39,
+                "text": "ut dolor dapibus gravida. Aliquam tincidunt, nunc ac mattis ornare,",
+                "Gender": "male"
+            },
+            {
+                "name": "Wilma Macdonald",
+                "age": 37,
+                "text": "inceptos hymenaeos. Mauris ut quam vel sapien imperdiet ornare. In",
+                "Gender": "female"
+            },
+            {
+                "name": "Grace Mack",
+                "age": 47,
+                "text": "ornare lectus justo eu arcu. Morbi sit amet massa. Quisque",
+                "Gender": "male"
+            },
+            {
+                "name": "Moses Strong",
+                "age": 22,
+                "text": "pede sagittis augue, eu tempor erat neque non quam. Pellentesque",
+                "Gender": "male"
+            },
+            {
+                "name": "Joelle Wallace",
+                "age": 41,
+                "text": "sed, facilisis vitae, orci. Phasellus dapibus quam quis diam. Pellentesque",
+                "Gender": "female"
+            },
+            {
+                "name": "Marny Mejia",
+                "age": 55,
+                "text": "orci lacus vestibulum lorem, sit amet ultricies sem magna nec",
+                "Gender": "female"
+            },
+            {
+                "name": "Dennis Holt",
+                "age": 33,
+                "text": "sodales elit erat vitae risus. Duis a mi fringilla mi",
+                "Gender": "female"
+            },
+            {
+                "name": "Jacob Burt",
+                "age": 20,
+                "text": "et, magna. Praesent interdum ligula eu enim. Etiam imperdiet dictum",
+                "Gender": "male"
+            },
+            {
+                "name": "Gloria Barrett",
+                "age": 37,
+                "text": "sapien. Aenean massa. Integer vitae nibh. Donec est mauris, rhoncus",
+                "Gender": "female"
+            },
+            {
+                "name": "Kyra Rush",
+                "age": 41,
+                "text": "lacus. Quisque imperdiet, erat nonummy ultricies ornare, elit elit fermentum",
+                "Gender": "male"
+            },
+            {
+                "name": "Oleg Short",
+                "age": 47,
+                "text": "cursus purus. Nullam scelerisque neque sed sem egestas blandit. Nam",
+                "Gender": "female"
+            },
+            {
+                "name": "Eve Morrison",
+                "age": 50,
+                "text": "neque. Morbi quis urna. Nunc quis arcu vel quam dignissim",
+                "Gender": "female"
+            },
+            {
+                "name": "Paloma Brady",
+                "age": 51,
+                "text": "Proin nisl sem, consequat nec, mollis vitae, posuere at, velit.",
+                "Gender": "male"
+            },
+            {
+                "name": "Alec Stevens",
+                "age": 38,
+                "text": "Nulla dignissim. Maecenas ornare egestas ligula. Nullam feugiat placerat velit.",
+                "Gender": "female"
+            },
+            {
+                "name": "Clayton Nixon",
+                "age": 59,
+                "text": "aliquet. Proin velit. Sed malesuada augue ut lacus. Nulla tincidunt,",
+                "Gender": "female"
+            },
+            {
+                "name": "Sandra Richmond",
+                "age": 33,
+                "text": "rutrum lorem ac risus. Morbi metus. Vivamus euismod urna. Nullam",
+                "Gender": "male"
+            },
+            {
+                "name": "Justin Ballard",
+                "age": 20,
+                "text": "pede, ultrices a, auctor non, feugiat nec, diam. Duis mi",
+                "Gender": "female"
+            },
+            {
+                "name": "Jameson Stanley",
+                "age": 58,
+                "text": "torquent per conubia nostra, per inceptos hymenaeos. Mauris ut quam",
+                "Gender": "female"
+            },
+            {
+                "name": "Timothy Leonard",
+                "age": 55,
+                "text": "Proin non massa non ante bibendum ullamcorper. Duis cursus, diam",
+                "Gender": "male"
+            },
+            {
+                "name": "Reed Carver",
+                "age": 33,
+                "text": "libero. Donec consectetuer mauris id sapien. Cras dolor dolor, tempus",
+                "Gender": "male"
+            },
+            {
+                "name": "Christen Carroll",
+                "age": 46,
+                "text": "quis, pede. Suspendisse dui. Fusce diam nunc, ullamcorper eu, euismod",
+                "Gender": "male"
+            },
+            {
+                "name": "Noel Compton",
+                "age": 38,
+                "text": "tempus risus. Donec egestas. Duis ac arcu. Nunc mauris. Morbi",
+                "Gender": "female"
+            },
+            {
+                "name": "Fleur Day",
+                "age": 49,
+                "text": "Praesent interdum ligula eu enim. Etiam imperdiet dictum magna. Ut",
+                "Gender": "male"
+            },
+            {
+                "name": "Ralph Clarke",
+                "age": 28,
+                "text": "sit amet, consectetuer adipiscing elit. Aliquam auctor, velit eget laoreet",
+                "Gender": "female"
+            },
+            {
+                "name": "Harding Torres",
+                "age": 37,
+                "text": "arcu. Vestibulum ante ipsum primis in faucibus orci luctus et",
+                "Gender": "male"
+            },
+            {
+                "name": "Otto Hoover",
+                "age": 34,
+                "text": "sollicitudin commodo ipsum. Suspendisse non leo. Vivamus nibh dolor, nonummy",
+                "Gender": "male"
+            },
+            {
+                "name": "Dalton Underwood",
+                "age": 21,
+                "text": "mauris. Morbi non sapien molestie orci tincidunt adipiscing. Mauris molestie",
+                "Gender": "female"
+            },
+            {
+                "name": "Kiayada Cameron",
+                "age": 52,
+                "text": "Aliquam vulputate ullamcorper magna. Sed eu eros. Nam consequat dolor",
+                "Gender": "male"
+            },
+            {
+                "name": "Quinn Chandler",
+                "age": 26,
+                "text": "nec urna suscipit nonummy. Fusce fermentum fermentum arcu. Vestibulum ante",
+                "Gender": "female"
+            },
+            {
+                "name": "Keaton Moreno",
+                "age": 35,
+                "text": "tempus mauris erat eget ipsum. Suspendisse sagittis. Nullam vitae diam.",
+                "Gender": "male"
+            },
+            {
+                "name": "Maisie Barton",
+                "age": 23,
+                "text": "sed dui. Fusce aliquam, enim nec tempus scelerisque, lorem ipsum",
+                "Gender": "female"
+            },
+            {
+                "name": "Malik Roman",
+                "age": 51,
+                "text": "id, mollis nec, cursus a, enim. Suspendisse aliquet, sem ut",
+                "Gender": "male"
+            },
+            {
+                "name": "Yasir Roberts",
+                "age": 35,
+                "text": "fermentum risus, at fringilla purus mauris a nunc. In at",
+                "Gender": "female"
+            },
+            {
+                "name": "Nissim Nichols",
+                "age": 55,
+                "text": "orci quis lectus. Nullam suscipit, est ac facilisis facilisis, magna",
+                "Gender": "male"
+            },
+            {
+                "name": "Graiden Woods",
+                "age": 51,
+                "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam laoreet,",
+                "Gender": "male"
+            },
+            {
+                "name": "Robert Osborne",
+                "age": 51,
+                "text": "vulputate dui, nec tempus mauris erat eget ipsum. Suspendisse sagittis.",
+                "Gender": "male"
+            },
+            {
+                "name": "Jillian Burnett",
+                "age": 42,
+                "text": "Nulla facilisis. Suspendisse commodo tincidunt nibh. Phasellus nulla. Integer vulputate,",
+                "Gender": "female"
+            },
+            {
+                "name": "Moana Carney",
+                "age": 37,
+                "text": "lectus ante dictum mi, ac mattis velit justo nec ante.",
+                "Gender": "female"
+            },
+            {
+                "name": "Zeph Webb",
+                "age": 43,
+                "text": "faucibus ut, nulla. Cras eu tellus eu augue porttitor interdum.",
+                "Gender": "male"
+            },
+            {
+                "name": "Meghan Atkins",
+                "age": 44,
+                "text": "Suspendisse aliquet, sem ut cursus luctus, ipsum leo elementum sem,",
+                "Gender": "female"
+            },
+            {
+                "name": "Fulton Barker",
+                "age": 46,
+                "text": "Cras eget nisi dictum augue malesuada malesuada. Integer id magna",
+                "Gender": "male"
+            },
+            {
+                "name": "Abel Smith",
+                "age": 39,
+                "text": "Curabitur ut odio vel est tempor bibendum. Donec felis orci,",
+                "Gender": "female"
+            },
+            {
+                "name": "Guy Leon",
+                "age": 19,
+                "text": "consectetuer adipiscing elit. Aliquam auctor, velit eget laoreet posuere, enim",
+                "Gender": "male"
+            },
+            {
+                "name": "Akeem Cline",
+                "age": 37,
+                "text": "non, egestas a, dui. Cras pellentesque. Sed dictum. Proin eget",
+                "Gender": "male"
+            },
+            {
+                "name": "Gareth Sellers",
+                "age": 33,
+                "text": "lorem, eget mollis lectus pede et risus. Quisque libero lacus,",
+                "Gender": "female"
+            },
+            {
+                "name": "Cyrus Vang",
+                "age": 26,
+                "text": "Cras vehicula aliquet libero. Integer in magna. Phasellus dolor elit,",
+                "Gender": "male"
+            },
+            {
+                "name": "David Hardin",
+                "age": 23,
+                "text": "at augue id ante dictum cursus. Nunc mauris elit, dictum",
+                "Gender": "female"
+            },
+            {
+                "name": "Alana Hopkins",
+                "age": 19,
+                "text": "ligula eu enim. Etiam imperdiet dictum magna. Ut tincidunt orci",
+                "Gender": "female"
+            },
+            {
+                "name": "Samantha Gilbert",
+                "age": 41,
+                "text": "primis in faucibus orci luctus et ultrices posuere cubilia Curae",
+                "Gender": "female"
+            },
+            {
+                "name": "Kermit Mckenzie",
+                "age": 59,
+                "text": "Cras pellentesque. Sed dictum. Proin eget odio. Aliquam vulputate ullamcorper",
+                "Gender": "male"
+            },
+            {
+                "name": "Felix Garner",
+                "age": 44,
+                "text": "velit eget laoreet posuere, enim nisl elementum purus, accumsan interdum",
+                "Gender": "female"
+            },
+            {
+                "name": "Jordan Cardenas",
+                "age": 44,
+                "text": "dictum augue malesuada malesuada. Integer id magna et ipsum cursus",
+                "Gender": "female"
+            },
+            {
+                "name": "Renee Rojas",
+                "age": 32,
+                "text": "enim. Suspendisse aliquet, sem ut cursus luctus, ipsum leo elementum",
+                "Gender": "female"
+            },
+            {
+                "name": "Curran Miles",
+                "age": 19,
+                "text": "vulputate velit eu sem. Pellentesque ut ipsum ac mi eleifend",
+                "Gender": "male"
+            },
+            {
+                "name": "Christine Rosa",
+                "age": 27,
+                "text": "In condimentum. Donec at arcu. Vestibulum ante ipsum primis in",
+                "Gender": "male"
+            },
+            {
+                "name": "Gage Miller",
+                "age": 25,
+                "text": "Aenean eget magna. Suspendisse tristique neque venenatis lacus. Etiam bibendum",
+                "Gender": "female"
+            },
+            {
+                "name": "Palmer Kinney",
+                "age": 21,
+                "text": "porttitor interdum. Sed auctor odio a purus. Duis elementum, dui",
+                "Gender": "female"
+            },
+            {
+                "name": "Dexter Shepherd",
+                "age": 58,
+                "text": "nunc, ullamcorper eu, euismod ac, fermentum vel, mauris. Integer sem",
+                "Gender": "female"
+            },
+            {
+                "name": "Oren Allison",
+                "age": 24,
+                "text": "sagittis augue, eu tempor erat neque non quam. Pellentesque habitant",
+                "Gender": "female"
+            },
+            {
+                "name": "Carly Richard",
+                "age": 47,
+                "text": "nunc ac mattis ornare, lectus ante dictum mi, ac mattis",
+                "Gender": "female"
+            },
+            {
+                "name": "Orla Hahn",
+                "age": 58,
+                "text": "sodales elit erat vitae risus. Duis a mi fringilla mi",
+                "Gender": "female"
+            },
+            {
+                "name": "Hiram Rush",
+                "age": 53,
+                "text": "Proin vel arcu eu odio tristique pharetra. Quisque ac libero",
+                "Gender": "female"
+            },
+            {
+                "name": "Cedric Cardenas",
+                "age": 39,
+                "text": "vestibulum massa rutrum magna. Cras convallis convallis dolor. Quisque tincidunt",
+                "Gender": "male"
+            },
+            {
+                "name": "Samson Davis",
+                "age": 47,
+                "text": "felis ullamcorper viverra. Maecenas iaculis aliquet diam. Sed diam lorem,",
+                "Gender": "male"
+            },
+            {
+                "name": "Chaim Aguilar",
+                "age": 27,
+                "text": "Proin dolor. Nulla semper tellus id nunc interdum feugiat. Sed",
+                "Gender": "female"
+            },
+            {
+                "name": "Nita Duke",
+                "age": 43,
+                "text": "eget mollis lectus pede et risus. Quisque libero lacus, varius",
+                "Gender": "male"
+            },
+            {
+                "name": "Keaton Joyce",
+                "age": 36,
+                "text": "ullamcorper. Duis at lacus. Quisque purus sapien, gravida non, sollicitudin",
+                "Gender": "male"
+            },
+            {
+                "name": "Paki Lloyd",
+                "age": 29,
+                "text": "nibh sit amet orci. Ut sagittis lobortis mauris. Suspendisse aliquet",
+                "Gender": "female"
+            },
+            {
+                "name": "Mara Shannon",
+                "age": 24,
+                "text": "mauris. Morbi non sapien molestie orci tincidunt adipiscing. Mauris molestie",
+                "Gender": "male"
+            },
+            {
+                "name": "Audra Lamb",
+                "age": 24,
+                "text": "fringilla, porttitor vulputate, posuere vulputate, lacus. Cras interdum. Nunc sollicitudin",
+                "Gender": "male"
+            },
+            {
+                "name": "Kibo Peck",
+                "age": 30,
+                "text": "arcu. Sed eu nibh vulputate mauris sagittis placerat. Cras dictum",
+                "Gender": "male"
+            },
+            {
+                "name": "Ivy Thomas",
+                "age": 45,
+                "text": "ultrices posuere cubilia Curae Phasellus ornare. Fusce mollis. Duis sit",
+                "Gender": "female"
+            },
+            {
+                "name": "Solomon Hubbard",
+                "age": 22,
+                "text": "nec, malesuada ut, sem. Nulla interdum. Curabitur dictum. Phasellus in",
+                "Gender": "male"
+            },
+            {
+                "name": "Morgan Vaughn",
+                "age": 44,
+                "text": "venenatis lacus. Etiam bibendum fermentum metus. Aenean sed pede nec",
+                "Gender": "male"
+            },
+            {
+                "name": "Uriel Curtis",
+                "age": 35,
+                "text": "hendrerit neque. In ornare sagittis felis. Donec tempor, est ac",
+                "Gender": "female"
+            },
+            {
+                "name": "Kiara Leonard",
+                "age": 44,
+                "text": "justo nec ante. Maecenas mi felis, adipiscing fringilla, porttitor vulputate,",
+                "Gender": "male"
+            },
+            {
+                "name": "Tyler Griffith",
+                "age": 51,
+                "text": "ultricies ornare, elit elit fermentum risus, at fringilla purus mauris",
+                "Gender": "male"
+            },
+            {
+                "name": "Paul Conrad",
+                "age": 35,
+                "text": "erat semper rutrum. Fusce dolor quam, elementum at, egestas a,",
+                "Gender": "female"
+            },
+            {
+                "name": "Lamar Parks",
+                "age": 32,
+                "text": "libero mauris, aliquam eu, accumsan sed, facilisis vitae, orci. Phasellus",
+                "Gender": "female"
+            },
+            {
+                "name": "Xantha Dunn",
+                "age": 26,
+                "text": "leo. Morbi neque tellus, imperdiet non, vestibulum nec, euismod in,",
+                "Gender": "male"
+            },
+            {
+                "name": "Camille Curry",
+                "age": 55,
+                "text": "Aliquam tincidunt, nunc ac mattis ornare, lectus ante dictum mi,",
+                "Gender": "female"
+            },
+            {
+                "name": "Lucy Slater",
+                "age": 19,
+                "text": "dapibus id, blandit at, nisi. Cum sociis natoque penatibus et",
+                "Gender": "male"
+            },
+            {
+                "name": "Quinn Kemp",
+                "age": 53,
+                "text": "Mauris blandit enim consequat purus. Maecenas libero est, congue a,",
+                "Gender": "male"
+            },
+            {
+                "name": "Asher Hess",
+                "age": 33,
+                "text": "ornare placerat, orci lacus vestibulum lorem, sit amet ultricies sem",
+                "Gender": "male"
+            },
+            {
+                "name": "Bruno Rojas",
+                "age": 38,
+                "text": "eget magna. Suspendisse tristique neque venenatis lacus. Etiam bibendum fermentum",
+                "Gender": "female"
+            },
+            {
+                "name": "Jelani Velez",
+                "age": 50,
+                "text": "tempus mauris erat eget ipsum. Suspendisse sagittis. Nullam vitae diam.",
+                "Gender": "female"
+            },
+            {
+                "name": "Ruth Higgins",
+                "age": 56,
+                "text": "Aenean sed pede nec ante blandit viverra. Donec tempus, lorem",
+                "Gender": "male"
+            },
+            {
+                "name": "Germane Hooper",
+                "age": 53,
+                "text": "ornare, libero at auctor ullamcorper, nisl arcu iaculis enim, sit",
+                "Gender": "male"
+            },
+            {
+                "name": "Basia Ratliff",
+                "age": 34,
+                "text": "magna a tortor. Nunc commodo auctor velit. Aliquam nisl. Nulla",
+                "Gender": "male"
+            },
+            {
+                "name": "Sade Fletcher",
+                "age": 27,
+                "text": "et arcu imperdiet ullamcorper. Duis at lacus. Quisque purus sapien,",
+                "Gender": "male"
+            },
+            {
+                "name": "Willa Fowler",
+                "age": 21,
+                "text": "aliquam, enim nec tempus scelerisque, lorem ipsum sodales purus, in",
+                "Gender": "male"
+            },
+            {
+                "name": "Cooper Alvarado",
+                "age": 54,
+                "text": "et malesuada fames ac turpis egestas. Fusce aliquet magna a",
+                "Gender": "male"
+            },
+            {
+                "name": "Cullen Livingston",
+                "age": 28,
+                "text": "metus. Aenean sed pede nec ante blandit viverra. Donec tempus,",
+                "Gender": "male"
+            },
+            {
+                "name": "Linus Velez",
+                "age": 39,
+                "text": "a odio semper cursus. Integer mollis. Integer tincidunt aliquam arcu.",
+                "Gender": "male"
+            },
+            {
+                "name": "Colorado Sanford",
+                "age": 39,
+                "text": "Fusce diam nunc, ullamcorper eu, euismod ac, fermentum vel, mauris.",
+                "Gender": "male"
+            },
+            {
+                "name": "Hedwig Horn",
+                "age": 54,
+                "text": "tristique senectus et netus et malesuada fames ac turpis egestas.",
+                "Gender": "male"
+            }
+        ];
+
+
+        var displayHtml = '';
+        for (let i = 0; i < data.length; i++) {
+            var template = `<div class="card ${data[i].Gender}">
+        <p>${data[i].name}</p>
+        <p>${data[i].age}</p>
+        <p>${data[i].text}</p>
+    </div>`;
+            displayHtml = displayHtml + template;
+        }
+        console.log(displayHtml);
+        document.getElementById("page").innerHTML = displayHtml;
+
+    </script>
+
+</body>
+
+</html>
